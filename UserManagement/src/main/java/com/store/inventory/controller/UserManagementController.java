@@ -4,6 +4,7 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -26,31 +27,31 @@ public class UserManagementController {
 	UserRepository userRepo;
 	
 	@PostMapping("create")
-	public User createUser(@RequestBody User user)
+	public ResponseEntity<User> createUser(@RequestBody User user)
 	{
 		user = userRepo.save(user);
-		return user;
+		return new ResponseEntity<User>(user,HttpStatus.CREATED);
 	}
 	
 	@PutMapping
-	public User updateUser(@RequestBody User user)
+	public ResponseEntity<User> updateUser(@RequestBody User user)
 	{
 		user = userRepo.save(user);
-		return user;
+		return new ResponseEntity<User>(user,HttpStatus.OK);
 	}
 
 	@DeleteMapping("/{userId}")
 	public HttpStatus deleteUser(@PathVariable Long userId)
 	{
-		userRepo.deleteById(userId);
+		userRepo.deleteById(userId);		
 		return HttpStatus.OK;
 	}
 	
 	@GetMapping("/{userId}")
-	public User rerieveUser(@PathVariable Long userId) throws UserNotFoundException
+	public ResponseEntity<User> rerieveUser(@PathVariable Long userId) throws UserNotFoundException
 	{		
 		Optional<User> userOptional = userRepo.findById(userId);
 		User user = userOptional.orElseThrow(UserNotFoundException::new);
-		return user;
+		return new ResponseEntity<User>(user,HttpStatus.OK);
 	}
 }
