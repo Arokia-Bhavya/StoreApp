@@ -40,7 +40,7 @@ public class CartItem {
 	Integer quantity;
 	byte active;
 	@CreationTimestamp
-	@Column(name="createdat")
+	@Column(name="createdat",updatable=false)
 	Timestamp createdAt;
 	
 }

@@ -6,6 +6,7 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -36,9 +37,9 @@ public class Cart {
 	String token;
 	Integer status;
 	@CreationTimestamp
-	@Column(name="createdat")
+	@Column(name="createdat",updatable=false)
 	Timestamp createdAt;
-	@OneToMany(targetEntity = CartItem.class, cascade = CascadeType.ALL)	
+	@OneToMany(targetEntity = CartItem.class, cascade = CascadeType.ALL, fetch = FetchType.LAZY)	
 	@JoinColumn(name = "cartid")	
 	private List<CartItem> cartItems;
 }

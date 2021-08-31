@@ -33,23 +33,23 @@ public class CartController {
 	}
 	
 	@PutMapping
-	public ResponseEntity<Cart> updateCart(@RequestBody Cart Cart)
+	public ResponseEntity<Cart> updateCart(@RequestBody Cart cart)
 	{
-		Cart = cartRepo.save(Cart);
-		return new ResponseEntity<Cart>(Cart,HttpStatus.OK);
+		cart = cartRepo.save(cart);
+		return new ResponseEntity<Cart>(cart,HttpStatus.OK);
 	}
 
-	@DeleteMapping("/{CartId}")
-	public HttpStatus deleteCart(@PathVariable Long CartId)
+	@DeleteMapping("/{cartId}")
+	public HttpStatus deleteCart(@PathVariable Long cartId)
 	{
-		cartRepo.deleteById(CartId);		
+		cartRepo.deleteById(cartId);		
 		return HttpStatus.OK;
 	}
 	
-	@GetMapping("/{CartId}")
-	public ResponseEntity<Cart> rerieveCart(@PathVariable Long CartId) throws CartNotFoundException
+	@GetMapping("/{cartId}")
+	public ResponseEntity<Cart> rerieveCart(@PathVariable Long cartId) throws CartNotFoundException
 	{		
-		Optional<Cart> cartOptional = cartRepo.findById(CartId);
+		Optional<Cart> cartOptional = cartRepo.findById(cartId);
 		Cart Cart = cartOptional.orElseThrow(CartNotFoundException::new);
 		return new ResponseEntity<Cart>(Cart,HttpStatus.OK);
 	}

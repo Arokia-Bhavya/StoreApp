@@ -39,7 +39,7 @@ public class Product {
 	Integer quantity;
 	Integer shop;
 	@CreationTimestamp
-	@Column(name="createdat")
+	@Column(name="createdat",updatable=false)
 	Timestamp createdAt;
 	@UpdateTimestamp
 	@Column(name="updatedat")

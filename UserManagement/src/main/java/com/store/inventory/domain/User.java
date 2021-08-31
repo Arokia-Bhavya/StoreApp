@@ -1,6 +1,7 @@
 package com.store.inventory.domain;
 
 import java.sql.Timestamp;
+import java.time.LocalDateTime;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -45,12 +46,12 @@ public class User {
 	 byte admin=0;
 	@Column(name="vendor")
 	 byte vendor=0;
-	@CreationTimestamp
-	@Column(name="registeredat")
-	 Timestamp registeredAt;
-	@UpdateTimestamp
+	@CreationTimestamp	
+	@Column(name="registeredat",updatable=false)
+	LocalDateTime  registeredAt;
+	@UpdateTimestamp	
 	@Column(name="lastlogin")
-	 Timestamp lastLogin;
+	LocalDateTime  lastLogin;
 	@Column(name="intro")
 	 String intro;
 	@Column(name="profile")
