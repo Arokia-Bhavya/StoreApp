@@ -45,11 +45,11 @@ public class Product {
 	@Column(name="updatedat")
 	Timestamp updatedAt;
 	@CreationTimestamp
-	@Column(name="publishedat")
+	@Column(name="publishedat",updatable=false)
 	Timestamp publishedAt;
-	@Column(name="startsat")
+	@Column(name="startsat",updatable=false)
 	Timestamp startsAt;
-	@Column(name="endsat")
+	@Column(name="endsat",updatable=false)
 	Timestamp endsAt;
 	@Column(name="content")
 	String content;

@@ -33,7 +33,7 @@ public class UserManagementController {
 		return new ResponseEntity<User>(user,HttpStatus.CREATED);
 	}
 	
-	@PutMapping
+	@PutMapping("update")
 	public ResponseEntity<User> updateUser(@RequestBody User user)
 	{
 		user = userRepo.save(user);
