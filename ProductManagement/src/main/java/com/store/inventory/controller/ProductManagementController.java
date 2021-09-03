@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.store.inventory.errorhandling.UserAccessNotFoundException;
 import com.store.inventory.domain.Product;
 import com.store.inventory.errorhandling.ProductNotFoundException;
 import com.store.inventory.repository.ProductRepository;
@@ -26,12 +27,21 @@ public class ProductManagementController {
 	@Autowired
 	ProductRepository productRepo;
 	
-	@PostMapping("create")
-	ResponseEntity<Product> createProduct(@RequestBody Product product)
+	/*@Autowired
+	ProductService productService;*/
+	
+	/*@PostMapping("create")
+	ResponseEntity<Product> createProduct(@RequestBody Product product) throws  UserAccessNotFoundException
 	{
+		boolean isAdmin=productService.isAdmin(product.getUserId());
+		if(isAdmin)
+		{
 		product=productRepo.save(product);
 		return new ResponseEntity<Product>(product,HttpStatus.CREATED);
-	}
+		}else 
+			throw new UserAccessNotFoundException("userId "+product.getUserId()+"cannot create product");
+		
+	}*/
 	
 	@PostMapping("bulkCreate")
 	HttpStatus createProduct(List<Product> productList)

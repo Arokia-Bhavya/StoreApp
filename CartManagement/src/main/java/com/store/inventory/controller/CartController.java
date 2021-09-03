@@ -32,7 +32,7 @@ public class CartController {
 		return new ResponseEntity<Cart>(Cart,HttpStatus.CREATED);
 	}
 	
-	@PutMapping
+	@PutMapping("update")
 	public ResponseEntity<Cart> updateCart(@RequestBody Cart cart)
 	{
 		cart = cartRepo.save(cart);

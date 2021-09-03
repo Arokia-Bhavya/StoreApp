@@ -1,0 +1,132 @@
+{
+	"info": {
+		"_postman_id": "e71bf8a0-ee71-4bdd-bac2-7215955bfe74",
+		"name": "UserManagement",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/store-app/users/create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n      \"firstName\":\"ryan\",\r\n      \"middleName\" :\"krisanto\",\r\n      \"lastName\":\"victoria\",\r\n      \"passwordHash\":\"test\",\r\n      \"admin\":0,\r\n      \"vendor\":1\r\n      \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/store-app/users/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"store-app",
+						"users",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/store-app/users/10",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \r\n        \"productId\": 1\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/store-app/users/10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"store-app",
+						"users",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/store-app/users/13",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n      \"firstName\":\"kevin\",\r\n      \"middleName\" :\"michael\",\r\n      \"lastName\":\"victoria\",\r\n      \"passwordHash\":\"test\",\r\n      \"admin\":1,\r\n      \"vendor\":1\r\n      \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/store-app/users/13",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"store-app",
+						"users",
+						"13"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/store-app/users/update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{     \r\n      \"id\": 17 ,\r\n      \"firstName\":\"raja\",\r\n      \"middleName\" :\"raja\",\r\n      \"lastName\":\"solan\",\r\n      \"passwordHash\":\"test\",\r\n      \"admin\":1,\r\n      \"vendor\":0\r\n      \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/store-app/users/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"store-app",
+						"users",
+						"update"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
