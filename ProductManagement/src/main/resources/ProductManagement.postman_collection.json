@@ -1,0 +1,165 @@
+{
+	"info": {
+		"_postman_id": "1b552943-9bba-4236-9a34-d80e9d1aee0f",
+		"name": "ProductManagement",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8081/store-app/products/10",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n      \"firstName\":\"kevin\",\r\n      \"middleName\" :\"michael\",\r\n      \"lastName\":\"victoria\",\r\n      \"passwordHash\":\"test\",\r\n      \"admin\":1,\r\n      \"vendor\":1\r\n      \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/store-app/products/10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"store-app",
+						"products",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/store-app/products/10",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n      \"firstName\":\"kevin\",\r\n      \"middleName\" :\"michael\",\r\n      \"lastName\":\"victoria\",\r\n      \"passwordHash\":\"test\",\r\n      \"admin\":1,\r\n      \"vendor\":1\r\n      \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/store-app/products/10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"store-app",
+						"products",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/store-app/products/create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"userId\":14,\r\n\"title\":\"Prestige OTG 28 Litres\",\r\n\"slug\":\"Oven\",\r\n\"type\":1,\r\n\"sku\":\"Store1\",\r\n\"price\":6999,\r\n\"discount\":10.0,\r\n\"quantity\":10,\r\n\"shop\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/store-app/products/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"store-app",
+						"products",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/store-app/products/create Copy",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"productId\"\r\n\"userId\":14,\r\n\"title\":\"Prestige OTG 28 Litres\",\r\n\"slug\":\"Oven\",\r\n\"type\":1,\r\n\"sku\":\"Store1\",\r\n\"price\":6999,\r\n\"discount\":0.0,\r\n\"quantity\":10,\r\n\"shop\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/store-app/products/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"store-app",
+						"products",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/store-app/products/all",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"userId\":14,\r\n\"title\":\"Sandisk Pendrive 5GB\",\r\n\"slug\":\"Pendrive\",\r\n\"type\":3,\r\n\"sku\":\"Store1\",\r\n\"price\":2999,\r\n\"discount\":2.0,\r\n\"quantity\":10,\r\n\"shop\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/store-app/products/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"store-app",
+						"products",
+						"all"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

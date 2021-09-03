@@ -1,0 +1,255 @@
+{
+	"info": {
+		"_postman_id": "26217e7d-f4e6-42f5-a021-e2f482e5ffa9",
+		"name": "CartManagement",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8082/store-app/cart/100",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"userId\":14,\r\n\"title\":\"Sandisk Pendrive 5GB\",\r\n\"slug\":\"Pendrive\",\r\n\"type\":3,\r\n\"sku\":\"Store1\",\r\n\"price\":2999,\r\n\"discount\":2.0,\r\n\"quantity\":10,\r\n\"shop\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/store-app/cart/100",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"store-app",
+						"cart",
+						"100"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8082/store-app/cartItem/100",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"userId\":14,\r\n\"title\":\"Sandisk Pendrive 5GB\",\r\n\"slug\":\"Pendrive\",\r\n\"type\":3,\r\n\"sku\":\"Store1\",\r\n\"price\":2999,\r\n\"discount\":2.0,\r\n\"quantity\":10,\r\n\"shop\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/store-app/cartItem/100",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"store-app",
+						"cartItem",
+						"100"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8082/store-app/cartItem/100",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"userId\":14,\r\n\"title\":\"Sandisk Pendrive 5GB\",\r\n\"slug\":\"Pendrive\",\r\n\"type\":3,\r\n\"sku\":\"Store1\",\r\n\"price\":2999,\r\n\"discount\":2.0,\r\n\"quantity\":10,\r\n\"shop\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/store-app/cartItem/100",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"store-app",
+						"cartItem",
+						"100"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8082/store-app/cart/100",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"userId\":14,\r\n\"title\":\"Sandisk Pendrive 5GB\",\r\n\"slug\":\"Pendrive\",\r\n\"type\":3,\r\n\"sku\":\"Store1\",\r\n\"price\":2999,\r\n\"discount\":2.0,\r\n\"quantity\":10,\r\n\"shop\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/store-app/cart/100",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"store-app",
+						"cart",
+						"100"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8082/store-app/cart/update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"sessionId\":\"default\",\r\n \"token\":\"default\",\r\n \"status\":0  \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/store-app/cart/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"store-app",
+						"cart",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8082/store-app/cart/create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"sessionId\":\"default\",\r\n \"token\":\"default\",\r\n \"status\":0  \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/store-app/cart/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"store-app",
+						"cart",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8082/store-app/cartItem/create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"productId\":6,\r\n \"cartId\":1,\r\n \"sku\":\"Store1\",\r\n \"price\":2999,\r\n \"discount\":2,\r\n \"quantity\":1,\r\n \"active\":0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/store-app/cartItem/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"store-app",
+						"cartItem",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8082/store-app/cartItem/create Copy",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"id\":1,\r\n \"productId\":6,\r\n \"cartId\":1,\r\n \"sku\":\"Store1\",\r\n \"price\":2999,\r\n \"discount\":0,\r\n \"quantity\":1,\r\n \"active\":0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/store-app/cartItem/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"store-app",
+						"cartItem",
+						"update"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
