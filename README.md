@@ -21,6 +21,7 @@
   * DELETE /store-app/users/{productId}
 - OrderManagementSystem
   * POST /store-app/order/create
+  * POST /store-app/order/create/{cartId}
   * GET /store-app/order/{orderId}
   * PUT /store-app/order/update
   * DELETE /store-app/order/{orderId}
